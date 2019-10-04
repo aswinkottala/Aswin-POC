@@ -1,0 +1,129 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder": "reports/HTMLReports",  
+  "log_path": "log/",
+  "globals": {
+    "waitForConditionTimeout": 180000,
+    "waitOperationTimeout":180000,
+    "operationTimeout":180000,
+    "end_session_on_fail": false,
+    "skip_testcases_on_fail": false
+  },
+  "screenshots": {
+    "enabled": true,
+    "path": "screenshots/",
+    "on_failure": true,
+    "on_error": true
+  },
+  "webdriver" : {
+    "start_process": true
+  },
+
+  "test_settings" : {
+    "default" : {
+      "webdriver" : {
+        "port": 9515
+      }
+    },
+    "chrome" : {
+      "webdriver" : {      
+        "server_path": "./lib/drivers/chromedriver_win.exe"
+      },      
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "--user-agent=Swiftbot",
+            "disable-web-security",
+             "--disable-dev-shm-usage", "--no-sandbox","--disable-gpu", "--disable-extensions", "disable-infobars",
+             "--window-size=1920,1080",
+           "ignore-certificate-errors",
+           "--test-type"
+          ]
+        },
+
+        "proxy": {
+          "proxyType": "manual",
+          "httpProxy": "http://10.164.13.32:8090"
+        },
+
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "loggingPrefs": { "browser": "ALL" } 
+      }
+    },
+    "chromelinux" : {
+      "webdriver" : {         
+        "server_path": "./lib/drivers/chromedriver_linux64"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "--user-agent=Swiftbot",
+            "disable-web-security",
+            "headless", "--disable-dev-shm-usage", "--no-sandbox","--disable-gpu", "--disable-extensions", "disable-infobars",
+            "--window-size=1920,1080",
+           "ignore-certificate-errors",
+           "--test-type"
+          ] 
+        },
+        "proxy": {
+          "proxyType": "manual",
+          "httpProxy": "http://10.164.13.32:8090"
+        },
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "loggingPrefs": { "browser": "ALL" }
+      }
+    },
+      "chromemac" : {
+        "webdriver" : {         
+          "server_path": "./lib/drivers/chromedriver_mac76"
+        },
+        "desiredCapabilities": {
+          "browserName": "chrome",
+          "chromeOptions": {
+            "args": [
+              "--user-agent=Swiftbot"
+            ]
+          },
+          "javascriptEnabled": true,
+          "acceptSslCerts": true,
+          "loggingPrefs": { "browser": "ALL" }
+        }
+      },
+    "firefox":{
+      "silent": true,
+        "desiredCapabilities": {
+           "browserName": "firefox",
+           "javascriptEnabled": true,
+           "marionette": true,
+           "acceptSslCerts": true,
+           "acceptInsecureCerts" :true,
+           "loggingPrefs": { "browser": "ALL" } 
+        }     
+    },
+    "edge": {
+      "silent": true,
+      "desiredCapabilities": {
+        "browserName": "MicrosoftEdge",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "nativeEvents": true
+      }
+    },
+
+  "ie" : {
+    "silent": true,
+    "desiredCapabilities": {
+      "browserName": "internet explorer",
+      "elementScrollBehavior": 1,
+      "javascriptEnabled": true,
+      "acceptSslCerts": true,
+      "allowBlockedContent": true,
+      "ignoreProtectedModeSettings": true
+    }
+  }
+  }
+}

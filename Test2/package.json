@@ -1,0 +1,39 @@
+{
+  "name": "cmsautomation",
+  "version": "1.0.0",
+  "description": "cmsautomation",
+  "main": "nightwatch.js",
+  "scripts": {
+    "testsol": "node nightwatch -e chrome -a --tag 'wiki' --reporter html-reporter.js",
+    "testwin": "node nightwatch -e chrome --tag 'forms' --reporter html-reporter.js",
+    "testlinux": "node nightwatch -e chromelinux --tag 'forms' --reporter html-reporter.js",
+    "test": "node nightwatch -e chromelinux -a cmstests",
+    "testforms": "node nightwatch -e chromelinux -a formsdev --reporter html-reporter.js",
+    "teststaticsite": "node nightwatch -e chromelinux -a cmsstatictests --reporter html-reporter.js",
+    "teststaticdata": "node nightwatch -e chromelinux -a cmsdata --reporter html-reporter.js",
+    "newforms": "node nightwatch -e chrome -a --tag 'forms' --reporter html-reporter.js",
+    "newformsmac": "node nightwatch -e chromemac -a --tag 'forms' --reporter html-reporter.js"
+  },
+  "author": "Aswin",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "handlebars": "^4.4.0",
+    "nightwatch": "^1.2.4",
+    "nightwatch-data-driven": "0.0.8",
+    "nightwatch-html-reporter": "^2.0.6",
+    "path": "^0.12.7",
+    "selenium-server": "^3.14.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "xlsx": "^0.13.3"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "npm",
+    "test"
+  ]
+}
