@@ -4,7 +4,7 @@ Please run the feature file to run the test and this has been executed against c
 
 Please see below for the test results after the execution
 Vehicle Matched from the output file :DN09HRM
-***Placed screen shot in C:\Solution\PetStore\target\screenshots\screenshot_20200709_092557.png ***
+***Placed screen shot in C:\Solution\vehiclereg\target\screenshots\screenshot_20200709_092557.png ***
 Vehicle Matched from the output file :KT17DLX
 Vehicle Matched from the output file :SG18HTN
 Waiting for 2 Seconds before Capturing the Screenshot
